@@ -7,7 +7,7 @@ Cloning the project.
 ```yarn start```
 There are tow componnet Inside the ```App.js``` :
 
-        ```<DragAndDropTreeTable/>```
-       ```<TreeTable/>```
+        <DragAndDropTreeTable/>
+        <TreeTable/>
 The first one has the initial functionalities.
 The second-one has the collapse/expande and search functionalities.
