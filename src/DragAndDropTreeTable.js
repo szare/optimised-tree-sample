@@ -37,7 +37,7 @@ const k0 = performance.now();
 class DragAndDropTreeTable extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log('DragAndDropTreeTable => constructor called', new Date());
     this.state = {
       columns: this.getColumns(),
       rows:[]
@@ -103,6 +103,7 @@ class DragAndDropTreeTable extends React.Component {
     ];
   }
   render() {
+    console.log('render => id=', this.props.id);
     const renderers = {
       header: {
         cell: dnd.Header
@@ -118,6 +119,7 @@ class DragAndDropTreeTable extends React.Component {
     )(this.state.rows);
 
     return (
+      <div id={this.props.id}>
       <Table.Provider
         //renderers={renderers}
         columns={columns}
@@ -151,6 +153,7 @@ class DragAndDropTreeTable extends React.Component {
           tableHeader={this.tableHeader}
         />
       </Table.Provider>
+      </div>
     );
   }
   onRow(row) {
